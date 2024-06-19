@@ -13,46 +13,7 @@
       </div>
 
       <div class="flex justify-between">
-        <!--  -->
-        <div class="w-[200px] mr-10">
-          <div
-            class="w-full h-[60px] bg-[url('@/assets/images/category_bg.png')] flex items-center justify-between text-white p-3"
-          >
-            <img class="object-cover cursor-pointer" src="@/assets/images/category.png" alt="" />
-            <div class="flex flex-col items-end text-base">
-              <div>商品分类</div>
-              <div>CATEGORIES</div>
-            </div>
-          </div>
-          <div class="w-full h-10 my-2">
-            <el-input
-              class="serach-input"
-              v-model="search"
-              placeholder="ショップ内で検索"
-              :suffix-icon="Search"
-            />
-          </div>
-          <el-popover placement="right" v-for="item in categoryList" :width="400">
-            <template #reference>
-              <router-link
-                to=""
-                class="w-full bg-gray-100 mb-2 p-2 px-3 rounded-full flex items-center justify-between cursor-pointer category-hover"
-              >
-                <img class="object-cover cursor-pointer" :src="item.icon" alt="" />
-                <div class="flex-1 ml-3 text-sm">{{ item.name }}</div>
-                <el-icon><ArrowRight /></el-icon>
-              </router-link>
-            </template>
-            <template #default>
-              <div v-for="item in 5">
-                <div class="flex gap-3 cursor-pointer">
-                  <div class="text-red-500 text-base">大分类{{ item }} <span class="mx-2">></span></div>
-                  <div class="text-sm" v-for="i in 5">子类{{ i }}</div>
-                </div>
-              </div>
-            </template>
-          </el-popover>
-        </div>
+        <iframe src="./menu.html" frameborder="0"></iframe>
         <!--  -->
         <div class="w-[960px]">
           <div v-for="item in contentList" class="mb-5">
