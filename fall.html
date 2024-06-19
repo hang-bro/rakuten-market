@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Js瀑布流布局</title>
+    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1" />
+    <style type="text/css">
+        #container{
+            position: relative; /* 父容器relative */
+        }
+        .item{
+            position: absolute; /* 成员设置为absolute */
+            display: flex; /* 主要为显示字居中 */
+            justify-content: center; /* 水平居中 */
+            align-items: center; /* 垂直居中 */
+            color: #fff; /* 字体颜色白色 */
+        }
+    </style>
+</head>
+<body>
+    <div id="container"></div>
+</body>
+    <script type="text/javascript">
+        var column = 3; // 制作三列布局
+        var counter = 0; // 计数器 为显示当前块计数
+        var columnHeight = Array(column).fill(0); // 记录每列高度
+        var container = document.getElementById("container"); // 父容器对象
+        var colorList = ["#EAA78C", "#F9CD82", "#9ADEAD", "#9CB6E9", "#E49D9B", "#97D7D7", "#ABA0CA", "#9F8BEC","#ACA4D5", "#6495ED", "#7BCDA5", "#76B4EF","#E1C38F","#F6C46A","#B19ED1","#F09B98","#87CECB","#D1A495","#89D196","#FE9E9F", "#93BAFF", "#D999F9", "#81C784", "#FFCA62", "#FFA477"]; // 颜色列表
+
+        function random(min=0, max=1) { // 生成随机数
+          return min + ~~((max-min)*Math.random()) // min <= random < max 
+        }
+
+        function findMinColumn(arr){ // 找到高度最小的列
+            var min = arr[0];
+            var index = 0;
+            arr.forEach((v,i) => {
+                if(v < min) {
+                    min = v;
+                    index = i;
+                }
+            })
+            return [index,min];
+        }
+
+
+        function appendImg(){
+            var gap = 3; // 间隙设为3px
+            for(let i=0;i<12;++i){ // 每次加载12个成员
+                var unit = {
+                    height:random(100,500), //随机一个不定高度
+                    width: 300, // 定宽
+                    color: colorList[random(0,colorList.length)] // 随机颜色
+                }
+                var [minIndex,min] = findMinColumn(columnHeight); // 获取高度最小列以及下标
+                var d = document.createElement("div");  // 创建一个节点
+                d.className = "item"; // 设置class
+                d.style.background = unit.color; // 设置背景颜色
+                d.style.height = `${unit.height}px`; // 设置宽度
+                d.style.width = `${unit.width}px`; // 设置宽度
+                d.style.top = `${min + gap}px`; // 设置上偏移
+                d.style.left = `${(300 + gap) * minIndex}px`; // 设置左偏移
+                d.innerText = `${++counter}#${unit.height}X${unit.width}`; // 设置文字
+                columnHeight[minIndex] += (unit.height+gap); // 更新选中列的高度
+                container.appendChild(d); // 添加节点
+            }
+        }
+
+        function init(){
+            appendImg(); // 初始加载
+            var endLoad = columnHeight.some(v => v > window.innerHeight); // 获取是否有某列高度大于屏幕高度
+            if(!endLoad) init(); // 如果没有则递归调用继续加载
+        }
+
+        (function(){
+             init(); // 打开页面自动加载
+        })();
+
+        window.onscroll = function (){ // 浏览器触底事件
+            var marginBottom = 0;
+            if (document.documentElement.scrollTop){
+                var scrollHeight = document.documentElement.scrollHeight;
+                var scrollTop = document.documentElement.scrollTop + document.body.scrollTop;
+                var clientHeight = document.documentElement.clientHeight;
+                marginBottom= scrollHeight - scrollTop - clientHeight;
+            } else {
+                var scrollHeight = document.body.scrollHeight;
+                var scrollTop = document.body.scrollTop;
+                var clientHeight = document.body.clientHeight;
+                marginBottom= scrollHeight - scrollTop - clientHeight;
+            }
+            if(marginBottom<=0) appendImg();
+        }
+
+    </script>
+</html>
