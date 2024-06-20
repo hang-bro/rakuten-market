@@ -99,18 +99,14 @@
   background-color: #f5f5f5;
   cursor: pointer;
 }
-.menu-list-box ul li div {
-  flex: 1;
-  padding-left: 5px;
-}
 .menu-list-box ul li:hover {
   background: linear-gradient(90deg, #fdc237 0%, #fe7902 100%);
 }
 .menu-list-box ul li:hover .popover {
-  display: block;
+  display: flex;
 }
 .menu-list-box ul li:focus .popover {
-  display: block;
+  display: flex;
 }
 .menu-list-box ul li .left-icon {
   width: 26px;
@@ -118,23 +114,35 @@
   margin-left: 6px;
   border-radius: 50%;
 }
+.menu-list-box ul li .left-icon ~ div {
+  flex: 1;
+  padding-left: 5px;
+  white-space: nowrap;
+}
 .menu-list-box ul li .right-icon {
-  margin-right: 10px;
+  margin-right: 20px;
+  width: 8px;
+  height: 8px;
+  border-top: 1px solid #cccc;
+  border-right: 1px solid #cccc;
+  transform: rotate(45deg);
 }
 .menu-list-box ul li .popover {
+  width: 700px;
   display: none;
   position: absolute;
-  padding: 10px;
+  padding: 0 !important;
   border-radius: 3px;
   left: 208px;
   background: #ffffff;
   box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+  flex-direction: column;
 }
 .menu-list-box ul li .popover-tri-angle {
   position: absolute;
   width: 10px;
   height: 10px;
-  background-color: #ffffff;
+  background-color: #f0f0f0;
   left: -6px;
   top: 50%;
   transform: translateY(-50%) rotate(45deg);
@@ -142,24 +150,36 @@
   border-bottom: 1px solid #eee;
 }
 .menu-list-box ul li .popover-item {
-  font-size: 14px;
-  white-space: nowrap;
   display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #d2d0d0;
+}
+.menu-list-box ul li .popover-item .label {
+  display: flex;
+  white-space: nowrap;
   align-items: center;
+  min-width: 100px;
+  padding: 10px;
+  text-decoration: none;
+  color: #000;
+  background-color: #f0f0f0;
 }
-.menu-list-box ul li .popover-item-label {
-  margin-right: 20px;
-}
-.menu-list-box ul li .popover-item-label:hover {
+.menu-list-box ul li .popover-item .label:hover {
   color: red;
 }
-.menu-list-box ul li .popover-item-child {
+.menu-list-box ul li .popover-item .list {
   display: flex;
-  gap: 10px;
-  font-size: small;
-  color: #434343;
+  gap: 20px;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  font-size: 13px;
+  padding: 10px;
 }
-.menu-list-box ul li .popover-item-child div:hover {
-  color: #0c8ce9;
-  font-weight: bold;
+.menu-list-box ul li .popover-item .list a {
+  text-decoration: none;
+  color: #000;
+}
+.menu-list-box ul li .popover-item .list a:hover {
+  color: red;
 }
