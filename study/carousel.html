@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>test</title>
+  <meta charset="utf-8">
+  <meta name="referrer" content="no-referrer">
+</head>
+<link rel="stylesheet" type="text/css" href="https://at.alicdn.com/t/font_1582902_u0zm91pv15i.css">
+<style type="text/css">
+  body {
+    margin: 0;
+    padding: 0px;
+  }
+
+  #carousel {
+    margin: auto;
+    width: 600px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  #carousel img {
+    width: 600px;
+  }
+
+  #carousel ul {
+    display: flex;
+    position: absolute;
+  }
+
+  #carousel ul li {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+  }
+
+  #leftArrow,
+  #rightArrow {
+    position: absolute;
+    left: 5px;
+    top: 43%;
+    width: 25px;
+    height: 30px;
+    background-color: #eee;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.7;
+    font-size: 20px;
+    cursor: pointer;
+  }
+
+  #rightArrow {
+    left: auto;
+    right: 5px;
+  }
+
+  #sliderBtn {
+    position: absolute;
+    width: 100%;
+    bottom: 0;
+    display: flex;
+    justify-content: flex-end;
+  }
+
+  .unitBtn {
+    width: 10px;
+    height: 10px;
+    background-color: #eee;
+    border-radius: 10px;
+    margin: 10px;
+    cursor: pointer;
+  }
+
+  .active {
+    background-color: #4C98F7;
+  }
+</style>
+
+<body>
+  <div id="carousel">
+    <ul>
+      <li>
+        <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116672412.jpg">
+      </li>
+      <li>
+        <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116672412.jpg">
+      </li>
+      <li>
+        <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116672412.jpg">
+      </li>
+
+    </ul>
+    <div id="leftArrow" class="iconfont icon-arrow-lift"></div>
+    <div id="rightArrow" class="iconfont icon-arrow-right"></div>
+    <div id="sliderBtn"></div>
+  </div>
+</body>
+<script type="text/javascript">
+  var imgArr = [];
+  var curIndex = 0;
+  var timer = null;
+  var clickAllow = true;
+  var btnList = [];
+
+  function slide(slideContainer, targetIndex = curIndex + 1) {
+    var width = 0;
+    if (targetIndex > curIndex) {
+      for (let i = curIndex; i < targetIndex; ++i) width += imgArr[i].width;
+    } else {
+      if (targetIndex === -1) width = imgArr[imgArr.length - 1].width;
+      else for (let i = targetIndex; i < curIndex; ++i) width += imgArr[i].width;
+    }
+    clickAllow = false;
+    var step = width / 60;
+    step = targetIndex > curIndex ? step : -step;
+    var curConLeft = slideContainer.offsetLeft;
+    var distanceMoved = 0;
+    var slideInterval = setInterval(function () {
+      if (Math.abs(width - distanceMoved) > Math.abs(step)) {
+        curConLeft -= step;
+        slideContainer.style.left = `${curConLeft - step}px`;
+        distanceMoved += Math.abs(step);
+      } else {
+        clearInterval(slideInterval);
+        var directMove = step > 0 ? (curConLeft - width + distanceMoved) : (curConLeft + width - distanceMoved);
+        slideContainer.style.left = `${directMove}px`;
+        distanceMoved = 0;
+        curIndex = targetIndex;
+        if (curIndex === imgArr.length) {
+          curIndex = 0;
+          slideContainer.style.left = `-${imgArr[0].width}px`;
+        } else if (curIndex === -1) {
+          curIndex = imgArr.length - 1;
+          slideContainer.style.left = `-${slideContainer.offsetWidth - imgArr[imgArr.length - 1].width - imgArr[0].width}px`;
+        }
+        switchBtnActive();
+        clickAllow = true;
+      }
+    }, 10);
+  }
+
+  function switchBtnActive() {
+    btnList.forEach((v) => {
+      v.className = "unitBtn";
+    })
+    btnList[curIndex].className = "unitBtn active";
+  }
+
+  function createBtnGroup(carousel, slideContainer, config) {
+    document.getElementById("leftArrow").addEventListener('click', (e) => {
+      clearInterval(timer);
+      if (clickAllow) slide(slideContainer, curIndex - 1);
+      timer = setInterval(() => { slide(slideContainer) }, config.interval);
+    })
+    document.getElementById("rightArrow").addEventListener('click', (e) => {
+      clearInterval(timer);
+      if (clickAllow) slide(slideContainer, curIndex + 1);
+      timer = setInterval(() => { slide(slideContainer) }, config.interval);
+    })
+    var sliderBtn = document.getElementById("sliderBtn");
+    imgArr.forEach((v, i) => {
+      let btn = document.createElement("div");
+      btn.className = i === 0 ? "unitBtn active" : "unitBtn";
+      btn.addEventListener('click', (e) => {
+        clearInterval(timer);
+        if (clickAllow) slide(slideContainer, i);
+        timer = setInterval(() => { slide(slideContainer) }, config.interval);
+      })
+      btnList.push(btn);
+      sliderBtn.appendChild(btn);
+    })
+  }
+
+
+  function edgeDispose(slideContainer) {
+    var li = document.createElement("li");
+    var img = document.createElement("img");
+    img.src = imgArr[0].src;
+    li.appendChild(img);
+    slideContainer.appendChild(li);
+    var li2 = document.createElement("li");
+    var img2 = document.createElement("img");
+    img2.src = imgArr[imgArr.length - 1].src;
+    li2.appendChild(img2);
+    slideContainer.insertBefore(li2, slideContainer.firstChild);
+    slideContainer.style.left = `-${imgArr[0].width}px`;
+  }
+
+  function eventDispose(carousel, slideContainer, config) {
+    document.addEventListener('visibilitychange', function () {
+      if (document.visibilityState == 'hidden') clearInterval(timer);
+      else timer = setInterval(() => { slide(slideContainer) }, config.interval);
+    });
+    carousel.addEventListener('mouseover', function () {
+      clearInterval(timer);
+    });
+    carousel.addEventListener('mouseleave', function () {
+      timer = setInterval(() => { slide(slideContainer) }, config.interval);
+    });
+  }
+
+
+  (function start() {
+    var config = {
+      height: "300px",
+      interval: 5000
+    }
+    var carousel = document.getElementById("carousel");
+    carousel.style.height = config.height;
+    document.querySelectorAll("#carousel img").forEach(v => imgArr.push(v));
+    var slideContainer = document.querySelector("#carousel > ul");
+    edgeDispose(slideContainer);
+    eventDispose(carousel, slideContainer, config);
+    createBtnGroup(carousel, slideContainer, config);
+    timer = setInterval(() => { slide(slideContainer) }, config.interval);
+  })();
+</script>
+
+</html>

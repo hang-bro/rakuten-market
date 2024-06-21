@@ -10,7 +10,7 @@
     >
       <div class="flex w-[1200px] m-auto pt-[300px]">
         <iframe class="w-[205px] mr-10" src="./menu.html" frameborder="0"></iframe>
-        <iframe class="w-full h-[1500px]" src="./content.html" frameborder="0"></iframe>
+        <iframe class="w-full h-[4500px]" src="./content.html" frameborder="0"></iframe>
       </div>
     </div>
     <iframe class="w-full h-[500px]" src="./footer.html" frameborder="0"></iframe>
