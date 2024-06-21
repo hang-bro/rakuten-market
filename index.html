@@ -5,7 +5,9 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>market 乐天超市</title>
+  <link rel="stylesheet" href="./css/header.css">
   <link rel="stylesheet" href="./css/menu.css">
+  <link rel="stylesheet" href="./css/footer.css">
 
   <style>
     * {
@@ -13,472 +15,695 @@
       margin: 0;
     }
 
-    .page-header {
-      width: 100%;
-      height: 1400px;
-    }
-
-    .page-content {
-      background: url('https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116673270.jpg');
-      background-repeat: no-repeat;
-      background-size: 100%;
-      margin-top: -280px;
-    }
-
-    .page-content-wrapper {
+    .content-wrapper {
       display: flex;
-      margin: 0 auto;
-      width: 1204px;
       justify-content: space-between;
-      padding-top: 300px;
-    }
-
-    .page-content-wrapper .content-iframe {
-      width: 960px;
-      height: 5400px;
-    }
-
-    .page-footer {
-      height: 700px;
-      width: 100%;
+      width: 1204px;
+      margin: 0 auto;
     }
   </style>
 </head>
 
 <body>
   <main>
-    <iframe class="page-header" src="./header.html" frameborder="0"></iframe>
-    <div class="page-content">
-      <div class="page-content-wrapper">
-        <div class="menu">
-          <div class="menu-header w-full flex items-center justify-between">
-            <img class=" w-full" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116672163.jpg" alt="" />
-          </div>
-          <div class="menu-search">
-            <input type="text" placeholder="ショップ内で検索">
-            <img class="" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116671184.jpg" alt="" />
-          </div>
-          <div class="menu-list-box">
-            <ul>
-              <li tabindex="0">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666202.jpg" alt="" />
-                <div>ドリンク</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-                  <div class="popover-item">
-                    <div class="list">
-                      <a href="">ウィルキンソン</a>
-                      <a href="">強炭酸水</a>
-                      <a href="">レッドブル</a>
-                      <a href="">コカコーラ</a>
-                      <a href="">ラムネ</a>
-                      <a href="">モンスターエナジー</a>
-                      <a href="">三ツ矢サイダー</a>
-                      <a href="">エナジードリンク</a>
-                      <a href="">ラベルレス</a>
-                      <a href="">サンペレグリノ</a>
-                    </div>
+    <!-- header start -->
+    <div>
+      <div class="header">
+        <header>
+          <a href="">
+            <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116682139.jpg" alt="" />
+          </a>
+        </header>
+        <div class="header-wrapper">
+          <section class="logo-and-search">
+            <img src="https://image.rakuten.co.jp/arkstore/cabinet/232323.jpg" style="width: 155px;" class="sale-img"
+              alt="" />
+            <a href="">
+              <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116682138.jpg"
+                style="width: 110px; height: 110px;" alt="" />
+            </a>
+            <div class="input-with-menu">
+              <div class="_input">
+                <input type="text" placeholder="ショップ内で検索">
+                <button>
+                  <img class="" style="width: 77px;border-radius: 50%;"
+                    src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116683874.jpg" alt="" />
+                </button>
+              </div>
 
-                  </div>
-
-                </div>
-              </li>
-              <li tabindex="1">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666221.jpg" alt="" />
-                <div>コーヒー</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-
-                  <div class="popover-item">
-                    <div class="list">
-                      <a href="">コーヒー豆</a>
-                      <a href="">ドリップバッグ</a>
-                      <a href="">コーヒー飲料</a>
-                      <a href="">カプセルコーヒー</a>
-                      <a href="">インスタントコーヒー</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-              <li tabindex="2">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666222.jpg" alt="" />
-                <div>お茶</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-
-                  <div class="popover-item">
-                    <div class="list">
-                      <a href="">麦茶</a>
-                      <a href="">ルイボスティー</a>
-                      <a href="">緑茶</a>
-                      <a href="">特茶</a>
-                      <a href="">午後の紅茶</a>
-                      <a href="">おーいお茶</a>
-                      <a href="">抹茶</a>
-                      <a href="">あずき茶</a>
-                      <a href="">はちみつ紅茶</a>
-                      <a href="">ほうじ茶</a>
-                    </div>
-
-                  </div>
-
-
-                </div>
-              </li>
-
-              <li tabindex="3">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666224.jpg" alt="" />
-                <div>野菜·果実飲料</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-
-                  <div class="popover-item">
-                    <div class="list">
-                      <a href="">野菜ジュース</a>
-                      <a href="">トマトジュース</a>
-                      <a href="">りんごジュース</a>
-                      <a href="">つぶらなカボス</a>
-                      <a href="">シークワーサー</a>
-                      <a href="">詰め合わせ</a>
-                      <a href="">オレンジジュース</a>
-                      <a href="">キレートレモン</a>
-                      <a href="">ソルティライチ</a>
-                      <a href="">1.8mx1.8m</a>
-                      <a href="">1.8mx2.0m</a>
-                      <a href="">2.0x2.0m</a>
-                    </div>
-
-                  </div>
-
-
-                </div>
-              </li>
-
-              <li tabindex="4">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666225.jpg" alt="" />
-                <div>互換インク</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label">
-                      キャノン互換
+              <div class="_menu">
+                <a href="">ホーム</a>
+                <a href="">会社概要</a>
+                <a href="">お支払い*送料</a>
+                <a href="">お買い物ガイド</a>
+                <a href="">メルマガ</a>
+                <a href="">お買い物カゴ</a>
+                <a href="">楽天トップへ</a>
+              </div>
+            </div>
+          </section>
+          <div class="banner-and-ads">
+            <section class="banner-and-ads_left">
+              <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116683814.jpg" alt="">
+              <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686317.jpg" alt="">
+            </section>
+            <section class="banner-and-ads_banner">
+              <div id="carousel">
+                <ul>
+                  <li>
+                    <a href="">
+                      <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116684682.jpg">
                     </a>
-                    <div class="list">
-                      <a href="">BCI-380/381</a>
-                      <a href="">BCI-370/371</a>
-                      <a href="">BCI-350/351</a>
-                      <a href="">BCI-325/326</a>
-                      <a href="">BCI-320/321</a>
-                      <a href="">BCI-43</a>
-                      <a href="">BCI-21/24</a>
-                      <a href="">BCI-19</a>
-                      <a href="">BCI-15/16</a>
-                      <a href="">BCI-11</a>
-                      <a href="">BCI-10</a>
-                      <a href="">BCI-7e/9</a>
-                      <a href="">BCI-3e/6</a>
-                      <a href="">PGI-2300</a>
-                      <a href="">PGI-1300</a>
-                      <a href="">PGI-73</a>
-                    </div>
-                  </div>
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label">
-                      エプソン互換
+                    <a href="">
+                      <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116684683.jpg">
                     </a>
-                    <div class="list">
-                      <a href="">ITH</a>
-                      <a href="">RDH</a>
-                      <a href="">YTH</a>
-                      <a href="">KUI</a>
-                      <a href="">KAM</a>
-                      <a href="">MUG</a>
-                      <a href="">SAT</a>
-                      <a href="">SAR</a>
-                      <a href="">IB06</a>
-                      <a href="">IP05</a>
-                      <a href="">IP03</a>
-                      <a href="">IC92</a>
-                      <a href="">IC90</a>
-                      <a href="">IC80</a>
-                      <a href="">IC77/78</a>
-                      <a href="">IC76</a>
-                      <a href="">IC75</a>
-                      <a href="">IC74</a>
-                      <a href="">IC70</a>
-                      <a href="">IC69</a>
-                      <a href="">IC67</a>
-                      <a href="">IC61/65</a>
-                      <a href="">IC61/62</a>
-                      <a href="">IC59</a>
-                      <a href="">IC56</a>
-                      <a href="">IC55</a>
-                      <a href="">IC53</a>
-                      <a href="">IC50</a>
-                      <a href="">IC47</a>
-                      <a href="">IC46</a>
-                      <a href="">IC45</a>
-                      <a href="">IC42</a>
-                      <a href="">IC37</a>
-                      <a href="">IC35</a>
-                      <a href="">IC34</a>
-                      <a href="">IC33</a>
-                      <a href="">IC32</a>
-                      <a href="">IC31</a>
-                      <a href="">IC29</a>
-                      <a href="">IC28</a>
-                      <a href="">IC23</a>
-                      <a href="">IC22</a>
-                      <a href="">IC21</a>
-                      <a href="">IC13</a>
-                      <a href="">IC12</a>
-                      <a href="">IC05/IC06</a>
-                      <a href="">IC04</a>
-                      <a href="">IC03</a>
-                      <a href="">IC02</a>
-
-                    </div>
-                  </div>
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label">
-                      ブラザー互換
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116684682.jpg">
                     </a>
-                    <div class="list">
-                      <a href="">LC3139</a>
-                      <a href="">LC3135</a>
-                      <a href="">LC3133</a>
-                      <a href="">LC3111</a>
-                      <a href="">LC211</a>
-                      <a href="">LC119/115</a>
-                      <a href="">LC117/115</a>
-                      <a href="">LC113</a>
-                      <a href="">LC111</a>
-                      <a href="">LC110</a>
-                      <a href="">LC21</a>
-                      <a href="">LC17</a>
-                      <a href="">LC12</a>
-                      <a href="">LC11/16</a>
-                      <a href="">LC10</a>
-                      <a href="">LC09</a>
-                      <a href="">LC07</a>
-                    </div>
-                  </div>
-
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label">
-                      HP互換
+                    <a href="">
+                      <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116684683.jpg">
                     </a>
-                    <div class="list">
-                      <a href="">HP950/951</a>
-                      <a href="">HP940</a>
-                      <a href="">HP932/933</a>
-                      <a href="">HP920</a>
-                      <a href="">HP178</a>
-                      <a href="">HP177</a>
-                      <a href="">その他</a>
-                    </div>
-                  </div>
-
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label">
-                      DELL互換
+                  </li>
+                  <li>
+                    <a href="">
+                      <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116684682.jpg">
                     </a>
-                    <div class="list">
-                      <a href="">DL21-24</a>
-                      <a href="">DL31-34</a>
-                    </div>
-                  </div>
+                    <a href="">
+                      <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116684683.jpg">
+                    </a>
+                  </li>
+                </ul>
+              </div>
+              <div class="basket">
+                <img style="width: 1204px;margin-top: 40px;"
+                  src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116673271.jpg" alt="">
+                <div class="basket-container">
+                  <a href=""><img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686317.jpg" alt=""></a>
+                  <a href=""><img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686317.jpg" alt=""></a>
+                  <a href=""><img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686317.jpg" alt=""></a>
+                  <a href=""><img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686317.jpg" alt=""></a>
+                  <a href=""><img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686317.jpg" alt=""></a>
                 </div>
-              </li>
-
-              <li tabindex="5">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666226.jpg" alt="" />
-                <div>互換トナー</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label" style="min-width: 150px;">キャノン互換</a>
-                    <div class="list">
-                      <a href="">CRG-524/CRG-524II</a>
-                      <a href="">CRG-519/CRG-519II</a>
-                      <a href="">CRG-515/CRG-515II</a>
-                      <a href="">CRG-510/CRG-510II</a>
-                      <a href="">CRG-508II</a>
-                      <a href="">CRG-418</a>
-                      <a href="">CRG-416</a>
-                      <a href="">CRG-337</a>
-                      <a href="">CRG-331</a>
-                      <a href="">CRG-329</a>
-                      <a href="">CRG-328</a>
-                      <a href="">CRG-326</a>
-                      <a href="">CRG-325</a>
-                      <a href="">CRG-318</a>
-                      <a href="">CRG-316</a>
-                      <a href="">CRG-312</a>
-                      <a href="">CRG-304</a>
-                      <a href="">CRG-303</a>
-                      <a href="">EP-32</a>
-                      <a href="">EP-26</a>
-                    </div>
-                  </div>
-
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label" style="min-width: 150px;">エプソン互換</a>
-                    <div class="list">
-                      <a href="">LPC3T18</a>
-                      <a href="">LPC3T33</a>
-                      <a href="">LPC3T35</a>
-                    </div>
-                  </div>
-
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label" style="min-width: 150px;">ブラザー互換</a>
-                    <div class="list">
-                      <a href="">TN-396</a>
-                      <a href="">TN-291/296</a>
-                      <a href="">TN-62J</a>
-                      <a href="">TN-56J</a>
-                      <a href="">TN-48J</a>
-                      <a href="">TN-28J</a>
-                      <a href="">TN-27J</a>
-                      <a href="">TN-26J</a>
-                      <a href="">TN-25J</a>
-                      <a href="">TN-11J</a>
-                      <a href="">DR-51J</a>
-                      <a href="">DR-41J</a>
-                      <a href="">DR-31J</a>
-                      <a href="">DR-23J</a>
-                      <a href="">DR-22J</a>
-                      <a href="">DR-21J</a>
-                      <a href="">DR-20J</a>
-                    </div>
-                  </div>
-
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label" style="min-width: 150px;">フジゼロックス互換</a>
-                    <div class="list">
-                      <a href="">CT-201398K</a>
-                      <a href="">CT-201399C</a>
-                      <a href="">CT-201400M</a>
-                      <a href="">CT-201401Y</a>
-                    </div>
-                  </div>
-
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label" style="min-width: 150px;">エヌイーシー互換</a>
-                    <div class="list">
-                      <a href="">PR-L5600C</a>
-                      <a href="">PR-L5700C</a>
-                    </div>
-                  </div>
-
-                </div>
-              </li>
-
-              <li tabindex="6">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666227.jpg" alt="" />
-                <div>互換テープ</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-                  <div class="popover-item">
-                    <a href="" class="label">
-                      幅・サイズ
-                    </a>
-                    <div class="list">
-                      <a href="">6MM</a>
-                      <a href="">9MM</a>
-                      <a href="">12MM</a>
-                      <a href="">18MM</a>
-                      <a href="">24MM</a>
-                      <a href="">36MM</a>
-                    </div>
-                  </div>
-                  <div class="popover-item" style="flex-wrap: nowrap;">
-                    <a href="" class="label">
-                      色
-                    </a>
-                    <div class="list">
-                      <a href="">黒文字/白テープ</a>
-                      <a href="">黒文字/赤テープ</a>
-                      <a href="">黒文字/青テープ</a>
-                      <a href="">黒文字/黄テープ</a>
-                      <a href="">黒文字/緑テープ</a>
-                      <a href="">黒文字/透明テープ</a>
-                      <a href="">黒文字/金テープ</a>
-                      <a href="">白文字/透明テープ</a>
-                      <a href="">白文字/黒テープ/</a>
-                      <a href="">白文字/赤テープ</a>
-                      <a href="">白文字/青テープ</a>
-                      <a href="">白文字/緑テープ</a>
-                      <a href="">赤文字/白テープ</a>
-                      <a href="">赤文字/透明テープ</a>
-                      <a href="">赤文字/黄テープ</a>
-                      <a href="">青文字/透明テープ</a>
-                      <a href="">青文字/白テープ</a>
-                      <a href="">金文字/透明テープ</a>
-                      <a href="">金文字/黒テープ</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-
-              <li tabindex="0">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666286.jpg" alt="" />
-                <div>キッチン用品</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-
-                </div>
-              </li>
-
-              <li tabindex="0">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666287.jpg" alt="" />
-                <div>シャワーカーテン</div>
-                <span class="right-icon"></span>
-                <div class="popover">
-                  <div class="popover-tri-angle"></div>
-                  <div class="popover-item">
-                    <div class="list">
-                      <a href="">1.8mx1.8m</a>
-                      <a href="">1.8mx2.0m</a>
-                      <a href="">2.0x2.0m</a>
-                    </div>
-                  </div>
-                </div>
-              </li>
-
-              <li tabindex="0">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666288.jpg" alt="" />
-                <div>ネックレス</div>
-                <span class="right-icon"></span>
-              </li>
-
-              <li tabindex="0">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666291.jpg" alt="" />
-                <div>車用収納</div>
-                <span class="right-icon"></span>
-              </li>
-
-              <li tabindex="0">
-                <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666310.jpg" alt="" />
-                <div>アウトドア用品</div>
-                <span class="right-icon"></span>
-              </li>
-            </ul>
+              </div>
+            </section>
+            <section class="banner-and-ads_right">
+              <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116683814.jpg" alt="">
+              <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686317.jpg" alt="">
+            </section>
           </div>
         </div>
-        <iframe class="content-iframe" src="./content.html" frameborder="0"></iframe>
+      </div>
+      <div style="
+    background: url('https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116673270.jpg');
+      background-repeat: no-repeat;
+      background-size: 100%;height: 500px;margin-top: -280px;">
       </div>
     </div>
-    <iframe class="page-footer" src="./footer.html" frameborder="0"></iframe>
+    <!-- header end-->
+    <div class="content-wrapper">
+    <!-- menu start -->
+      <div class="menu">
+        <div class="menu-header w-full flex items-center justify-between">
+          <img class=" w-full" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116672163.jpg" alt="" />
+        </div>
+        <div class="menu-search">
+          <input type="text" placeholder="ショップ内で検索">
+          <img class="" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116671184.jpg" alt="" />
+        </div>
+        <div class="menu-list-box">
+          <ul>
+            <li tabindex="0">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666202.jpg" alt="" />
+              <div>ドリンク</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+                <div class="popover-item">
+                  <div class="list">
+                    <a href="">ウィルキンソン</a>
+                    <a href="">強炭酸水</a>
+                    <a href="">レッドブル</a>
+                    <a href="">コカコーラ</a>
+                    <a href="">ラムネ</a>
+                    <a href="">モンスターエナジー</a>
+                    <a href="">三ツ矢サイダー</a>
+                    <a href="">エナジードリンク</a>
+                    <a href="">ラベルレス</a>
+                    <a href="">サンペレグリノ</a>
+                  </div>
+
+                </div>
+
+              </div>
+            </li>
+            <li tabindex="1">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666221.jpg" alt="" />
+              <div>コーヒー</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+
+                <div class="popover-item">
+                  <div class="list">
+                    <a href="">コーヒー豆</a>
+                    <a href="">ドリップバッグ</a>
+                    <a href="">コーヒー飲料</a>
+                    <a href="">カプセルコーヒー</a>
+                    <a href="">インスタントコーヒー</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+            <li tabindex="2">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666222.jpg" alt="" />
+              <div>お茶</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+
+                <div class="popover-item">
+                  <div class="list">
+                    <a href="">麦茶</a>
+                    <a href="">ルイボスティー</a>
+                    <a href="">緑茶</a>
+                    <a href="">特茶</a>
+                    <a href="">午後の紅茶</a>
+                    <a href="">おーいお茶</a>
+                    <a href="">抹茶</a>
+                    <a href="">あずき茶</a>
+                    <a href="">はちみつ紅茶</a>
+                    <a href="">ほうじ茶</a>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </li>
+
+            <li tabindex="3">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666224.jpg" alt="" />
+              <div>野菜·果実飲料</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+
+                <div class="popover-item">
+                  <div class="list">
+                    <a href="">野菜ジュース</a>
+                    <a href="">トマトジュース</a>
+                    <a href="">りんごジュース</a>
+                    <a href="">つぶらなカボス</a>
+                    <a href="">シークワーサー</a>
+                    <a href="">詰め合わせ</a>
+                    <a href="">オレンジジュース</a>
+                    <a href="">キレートレモン</a>
+                    <a href="">ソルティライチ</a>
+                    <a href="">1.8mx1.8m</a>
+                    <a href="">1.8mx2.0m</a>
+                    <a href="">2.0x2.0m</a>
+                  </div>
+
+                </div>
+
+
+              </div>
+            </li>
+
+            <li tabindex="4">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666225.jpg" alt="" />
+              <div>互換インク</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label">
+                    キャノン互換
+                  </a>
+                  <div class="list">
+                    <a href="">BCI-380/381</a>
+                    <a href="">BCI-370/371</a>
+                    <a href="">BCI-350/351</a>
+                    <a href="">BCI-325/326</a>
+                    <a href="">BCI-320/321</a>
+                    <a href="">BCI-43</a>
+                    <a href="">BCI-21/24</a>
+                    <a href="">BCI-19</a>
+                    <a href="">BCI-15/16</a>
+                    <a href="">BCI-11</a>
+                    <a href="">BCI-10</a>
+                    <a href="">BCI-7e/9</a>
+                    <a href="">BCI-3e/6</a>
+                    <a href="">PGI-2300</a>
+                    <a href="">PGI-1300</a>
+                    <a href="">PGI-73</a>
+                  </div>
+                </div>
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label">
+                    エプソン互換
+                  </a>
+                  <div class="list">
+                    <a href="">ITH</a>
+                    <a href="">RDH</a>
+                    <a href="">YTH</a>
+                    <a href="">KUI</a>
+                    <a href="">KAM</a>
+                    <a href="">MUG</a>
+                    <a href="">SAT</a>
+                    <a href="">SAR</a>
+                    <a href="">IB06</a>
+                    <a href="">IP05</a>
+                    <a href="">IP03</a>
+                    <a href="">IC92</a>
+                    <a href="">IC90</a>
+                    <a href="">IC80</a>
+                    <a href="">IC77/78</a>
+                    <a href="">IC76</a>
+                    <a href="">IC75</a>
+                    <a href="">IC74</a>
+                    <a href="">IC70</a>
+                    <a href="">IC69</a>
+                    <a href="">IC67</a>
+                    <a href="">IC61/65</a>
+                    <a href="">IC61/62</a>
+                    <a href="">IC59</a>
+                    <a href="">IC56</a>
+                    <a href="">IC55</a>
+                    <a href="">IC53</a>
+                    <a href="">IC50</a>
+                    <a href="">IC47</a>
+                    <a href="">IC46</a>
+                    <a href="">IC45</a>
+                    <a href="">IC42</a>
+                    <a href="">IC37</a>
+                    <a href="">IC35</a>
+                    <a href="">IC34</a>
+                    <a href="">IC33</a>
+                    <a href="">IC32</a>
+                    <a href="">IC31</a>
+                    <a href="">IC29</a>
+                    <a href="">IC28</a>
+                    <a href="">IC23</a>
+                    <a href="">IC22</a>
+                    <a href="">IC21</a>
+                    <a href="">IC13</a>
+                    <a href="">IC12</a>
+                    <a href="">IC05/IC06</a>
+                    <a href="">IC04</a>
+                    <a href="">IC03</a>
+                    <a href="">IC02</a>
+
+                  </div>
+                </div>
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label">
+                    ブラザー互換
+                  </a>
+                  <div class="list">
+                    <a href="">LC3139</a>
+                    <a href="">LC3135</a>
+                    <a href="">LC3133</a>
+                    <a href="">LC3111</a>
+                    <a href="">LC211</a>
+                    <a href="">LC119/115</a>
+                    <a href="">LC117/115</a>
+                    <a href="">LC113</a>
+                    <a href="">LC111</a>
+                    <a href="">LC110</a>
+                    <a href="">LC21</a>
+                    <a href="">LC17</a>
+                    <a href="">LC12</a>
+                    <a href="">LC11/16</a>
+                    <a href="">LC10</a>
+                    <a href="">LC09</a>
+                    <a href="">LC07</a>
+                  </div>
+                </div>
+
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label">
+                    HP互換
+                  </a>
+                  <div class="list">
+                    <a href="">HP950/951</a>
+                    <a href="">HP940</a>
+                    <a href="">HP932/933</a>
+                    <a href="">HP920</a>
+                    <a href="">HP178</a>
+                    <a href="">HP177</a>
+                    <a href="">その他</a>
+                  </div>
+                </div>
+
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label">
+                    DELL互換
+                  </a>
+                  <div class="list">
+                    <a href="">DL21-24</a>
+                    <a href="">DL31-34</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li tabindex="5">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666226.jpg" alt="" />
+              <div>互換トナー</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label" style="min-width: 150px;">キャノン互換</a>
+                  <div class="list">
+                    <a href="">CRG-524/CRG-524II</a>
+                    <a href="">CRG-519/CRG-519II</a>
+                    <a href="">CRG-515/CRG-515II</a>
+                    <a href="">CRG-510/CRG-510II</a>
+                    <a href="">CRG-508II</a>
+                    <a href="">CRG-418</a>
+                    <a href="">CRG-416</a>
+                    <a href="">CRG-337</a>
+                    <a href="">CRG-331</a>
+                    <a href="">CRG-329</a>
+                    <a href="">CRG-328</a>
+                    <a href="">CRG-326</a>
+                    <a href="">CRG-325</a>
+                    <a href="">CRG-318</a>
+                    <a href="">CRG-316</a>
+                    <a href="">CRG-312</a>
+                    <a href="">CRG-304</a>
+                    <a href="">CRG-303</a>
+                    <a href="">EP-32</a>
+                    <a href="">EP-26</a>
+                  </div>
+                </div>
+
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label" style="min-width: 150px;">エプソン互換</a>
+                  <div class="list">
+                    <a href="">LPC3T18</a>
+                    <a href="">LPC3T33</a>
+                    <a href="">LPC3T35</a>
+                  </div>
+                </div>
+
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label" style="min-width: 150px;">ブラザー互換</a>
+                  <div class="list">
+                    <a href="">TN-396</a>
+                    <a href="">TN-291/296</a>
+                    <a href="">TN-62J</a>
+                    <a href="">TN-56J</a>
+                    <a href="">TN-48J</a>
+                    <a href="">TN-28J</a>
+                    <a href="">TN-27J</a>
+                    <a href="">TN-26J</a>
+                    <a href="">TN-25J</a>
+                    <a href="">TN-11J</a>
+                    <a href="">DR-51J</a>
+                    <a href="">DR-41J</a>
+                    <a href="">DR-31J</a>
+                    <a href="">DR-23J</a>
+                    <a href="">DR-22J</a>
+                    <a href="">DR-21J</a>
+                    <a href="">DR-20J</a>
+                  </div>
+                </div>
+
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label" style="min-width: 150px;">フジゼロックス互換</a>
+                  <div class="list">
+                    <a href="">CT-201398K</a>
+                    <a href="">CT-201399C</a>
+                    <a href="">CT-201400M</a>
+                    <a href="">CT-201401Y</a>
+                  </div>
+                </div>
+
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label" style="min-width: 150px;">エヌイーシー互換</a>
+                  <div class="list">
+                    <a href="">PR-L5600C</a>
+                    <a href="">PR-L5700C</a>
+                  </div>
+                </div>
+
+              </div>
+            </li>
+
+            <li tabindex="6">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666227.jpg" alt="" />
+              <div>互換テープ</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+                <div class="popover-item">
+                  <a href="" class="label">
+                    幅・サイズ
+                  </a>
+                  <div class="list">
+                    <a href="">6MM</a>
+                    <a href="">9MM</a>
+                    <a href="">12MM</a>
+                    <a href="">18MM</a>
+                    <a href="">24MM</a>
+                    <a href="">36MM</a>
+                  </div>
+                </div>
+                <div class="popover-item" style="flex-wrap: nowrap;">
+                  <a href="" class="label">
+                    色
+                  </a>
+                  <div class="list">
+                    <a href="">黒文字/白テープ</a>
+                    <a href="">黒文字/赤テープ</a>
+                    <a href="">黒文字/青テープ</a>
+                    <a href="">黒文字/黄テープ</a>
+                    <a href="">黒文字/緑テープ</a>
+                    <a href="">黒文字/透明テープ</a>
+                    <a href="">黒文字/金テープ</a>
+                    <a href="">白文字/透明テープ</a>
+                    <a href="">白文字/黒テープ/</a>
+                    <a href="">白文字/赤テープ</a>
+                    <a href="">白文字/青テープ</a>
+                    <a href="">白文字/緑テープ</a>
+                    <a href="">赤文字/白テープ</a>
+                    <a href="">赤文字/透明テープ</a>
+                    <a href="">赤文字/黄テープ</a>
+                    <a href="">青文字/透明テープ</a>
+                    <a href="">青文字/白テープ</a>
+                    <a href="">金文字/透明テープ</a>
+                    <a href="">金文字/黒テープ</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+
+            <li tabindex="0">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666286.jpg" alt="" />
+              <div>キッチン用品</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+
+              </div>
+            </li>
+
+            <li tabindex="0">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666287.jpg" alt="" />
+              <div>シャワーカーテン</div>
+              <span class="right-icon"></span>
+              <div class="popover">
+                <div class="popover-tri-angle"></div>
+                <div class="popover-item">
+                  <div class="list">
+                    <a href="">1.8mx1.8m</a>
+                    <a href="">1.8mx2.0m</a>
+                    <a href="">2.0x2.0m</a>
+                  </div>
+                </div>
+              </div>
+            </li>
+
+            <li tabindex="0">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666288.jpg" alt="" />
+              <div>ネックレス</div>
+              <span class="right-icon"></span>
+            </li>
+
+            <li tabindex="0">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666291.jpg" alt="" />
+              <div>車用収納</div>
+              <span class="right-icon"></span>
+            </li>
+
+            <li tabindex="0">
+              <img class="left-icon" src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116666310.jpg" alt="" />
+              <div>アウトドア用品</div>
+              <span class="right-icon"></span>
+            </li>
+          </ul>
+        </div>
+      </div>
+    <!-- menu end -->
+      <iframe style="width: 960px;margin-top: -170px;height: 5400px;" src="./content.html" frameborder="0"></iframe>
+    </div>
+    <!-- footer start-->
+    <div class="footer">
+      <section class="footer-content">
+        <div class="footer-content-diliver">
+          <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116685560.jpg" alt="" />
+          <a href="">&gt;了解更多详情</a>
+          <div class="diliver-detail">
+            <img style="width: 65px;" src="https://image.rakuten.co.jp/arkstore/cabinet/20240620-161454.jpg" alt="">
+            <div class="diliver-detail-text">
+              <div class="item-title"><span>※</span>海外配送について</div>
+              <div class="item-text">
+                <div class="item-text-circle"></div>
+                <div class="item-text-content">
+                  当店は海外へ発送を行っていません<br>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-content-item">
+          <div>
+            <div class="item-title"><span>※</span>返品交換について</div>
+            <div class="item-text">
+              <div class="item-text-circle"></div>
+              <div class="item-text-content">
+                商品の性質上、お客様の都合による返品は原則的にお断りしています。<br>
+                上記に該当する場合、商品到着日より7日以内にご連絡をお願いいたします。<br>
+                ご返信をもって、受領とさせていただきます。<br>
+                この期間を過ぎた場合、返品はお受けできなくなりますので、あらかじめご了承ください。<br>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="item-title"><span>※</span>返品について</div>
+            <div class="item-text">
+              <div class="item-text-circle"></div>
+              <div class="item-text-content">
+                返品を受け付ける条件<br>
+                未開封・未使用のもので、商品ご到着後７日以内にメールにて連絡いただいたもののみお受けいたします。<br>
+              </div>
+            </div>
+            <div class="item-text">
+              <div class="item-text-circle"></div>
+              <div class="item-text-content">
+                返品の送料・手数料の負担について<br>
+                初期不良の場合は当社が負担いたします。<br>
+                お客様都合の場合はお客様にご負担いただきます。<br>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="item-title"><span>※</span>返金について</div>
+            <div class="item-text">
+              <div class="item-text-circle"></div>
+              <div class="item-text-content">
+                返品商品到着確認後５日以内返金いたします<br>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="item-title"><span>※</span>注意事項</div>
+            <div class="item-text">
+              <div class="item-text-circle"></div>
+              <div class="item-text-content">
+                この商品は代引きは不可ですので予めご了承ください<br>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-content-item" style="width: 470px;">
+          <div>
+            <div class="item-title"><span>※</span>お支払について</div>
+          </div>
+          <div style="display: flex;margin: 10px 0;">
+            <div class="item-title"><span>※</span></div>
+            <div class="item-text-content">
+              決済については楽天ペイが導入して以来、楽天市場が管理することとなっておりますので、 決済に関する質問は、お手数をおかけいたしますが、楽天市場までお問い合わせお願いいたします。<br>
+            </div>
+          </div>
+
+          <div style="font-size: 12px;color: #4e4a4a;padding-left: 30px;margin-bottom: 15px;">
+            <ul>
+              <li>クレジットカード決済</li>
+              <li>楽天バンク決済</li>
+              <li>ローソン決済(前払)</li>
+              <li>セブンイレブン決済(前払)</li>
+              <li>銀行振込</li>
+            </ul>
+
+            <div class="right-content">
+              <img src="https://image.rakuten.co.jp/arkstore/cabinet/imgrc0116686130.jpg" alt="" />
+              <div class="item-text" style="margin-bottom: 5px;">
+                <div class="item-text-circle"></div>
+                <div class="item-text-content">
+                  楽天市場のカード決済ではSSLというシステムを利用しております。カード番号は暗号化されて送信されますのでご安心下さい。<br>
+                </div>
+              </div>
+              <div class="item-text">
+                <div class="item-text-circle"></div>
+                <div class="item-text-content">
+                  当カード決済システム上、クレジットカード利用控は発行しておりません。<br>
+                </div>
+              </div>
+              <div class="item-text">
+                <div class="item-text-circle"></div>
+                <div class="item-text-content">
+                  カード会社から送付されますご利用明細をご確認下さい。<br>
+                </div>
+              </div>
+              <div class="item-text">
+                <div class="item-text-circle"></div>
+                <div class="item-text-content">
+                  お客様のご利用状態等によっては、他の決済手段に変更いただく場合がございます。<br>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div>
+            <div class="item-title"><span>※</span>お問い合わせ</div>
+            <div class="text-with-red-bg">
+              皆の生活館　楽天市場店
+            </div>
+          </div>
+          <div class="text-and-icon">
+            <img src="https://image.rakuten.co.jp/arkstore/cabinet/20240620-161504.jpg" alt="">
+            <div>332-0012 埼玉県川口市本町1-8-21</div>
+          </div>
+          <div class="text-and-icon">
+            <img src="https://image.rakuten.co.jp/arkstore/cabinet/20240621-093112.jpg" alt="">
+            <div>
+              <span>TEL:048-291-8669</span><br>
+              <p>(電話対応時間: 平日 11:00～12:00 13:00～14:30)</p>
+              <p>上記以外の時間帯に関して、メールにてご連絡ください。</p>
+            </div>
+          </div>
+          <div class="text-and-icon">
+            <img src="https://image.rakuten.co.jp/arkstore/cabinet/20240621-093108.jpg" alt="">
+            <div>
+              <span>メールアドレス:daiwasyoukayi@shop.rakuten.co.jp (24時間受け付け)</span><br>
+              <p>※営業日については左のサイドバーにあるカレンダーをご参照ください</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <footer class="flex items-center justify-center  w-full ">
+        版权所有 (C) Costcost21 保留所有权利
+      </footer>
+    </div>
+    <!-- footer end-->
+
   </main>
 </body>
 

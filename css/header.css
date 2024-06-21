@@ -136,12 +136,30 @@
 .header .banner-and-ads {
   display: flex;
   justify-content: space-between;
+  margin: 0 auto;
 }
 .header .banner-and-ads_left {
   width: 200px;
+  position: fixed;
+  top: 80px;
+  left: 10px;
 }
 .header .banner-and-ads_left img {
   width: 100%;
+  max-height: 600px;
+  object-fit: cover;
+  margin-bottom: 5px;
+}
+.header .banner-and-ads_right {
+  width: 200px;
+  position: fixed;
+  top: 80px;
+  right: 10px;
+}
+.header .banner-and-ads_right img {
+  width: 100%;
+  max-height: 600px;
+  object-fit: cover;
   margin-bottom: 5px;
 }
 .header .banner-and-ads_banner #carousel {
@@ -204,11 +222,4 @@
 .header .banner-and-ads_banner .basket-container img {
   width: 200px;
   height: 200px;
-}
-.header .banner-and-ads_right {
-  width: 200px;
-}
-.header .banner-and-ads_right img {
-  width: 100%;
-  margin-bottom: 5px;
 }
