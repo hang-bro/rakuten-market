@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="./css/newMenu.css">
+
+</head>
+
+<body>
+  <style>
+    .accordion {
+      width: 250px;
+    }
+
+    .accordion-item {
+      margin-bottom: 5px;
+    }
+
+    .accordion-item input[type='checkbox'] {
+      display: none;
+    }
+
+    .accordion-item label {
+      display: block;
+      padding: 10px;
+      background-color: #eee;
+      cursor: pointer;
+    }
+
+    .accordion-content {
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.3s ease-out;
+      background-color: #eee;
+    }
+
+    .accordion-item input[type='checkbox']:checked+label+.accordion-content {
+      max-height: 1000px;
+    }
+
+    .accordion-item input[type='checkbox']:not(:checked)+label+.accordion-content {
+      max-height: 0;
+    }
+
+    /* 二级手风琴 */
+    .accordion-sub-item label {
+      background-color: #e9e9e9;
+    }
+
+    /* 三级手风琴 */
+    .accordion-sub-sub-item {
+      background-color: #e1e1e1;
+    }
+
+    .accordion-sub-sub-item label {
+      background-color: #e1e1e1;
+    }
+
+    .list-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      padding: 5px;
+      gap: 5px;
+      justify-content: space-between;
+    }
+
+    .list-wrapper a {
+      text-decoration: none;
+      list-style: none;
+      width: 45%;
+      background-color: #fff;
+      padding: 3px;
+      display: flex;
+      align-items: center;
+      text-indent: 1.5em;
+      font-size: 14px;
+      color: #000;
+    }
+  </style>
+  <div class="accordion">
+    <div class="accordion-item">
+      <input type='checkbox' name="accordion" id="item1">
+      <label for="item1"> 互換インク</label>
+      <div class="accordion-content">
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem1">
+          <label for="subitem1">キャノン互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem1">
+              <div class="list-wrapper">
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000111/" target="_top">BCI-380/381</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000104/" target="_top">BCI-370/371</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000105/" target="_top">BCI-350/351</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000122/" target="_top">BCI-325/326</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000123/" target="_top">BCI-320/321</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000126/" target="_top">BCI-43</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000127/" target="_top">BCI-21/24</a>
+                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000926/" target="_top">BCI-15/16</a>
+                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000928/" target="_top">BCI-11</a>
+                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000923/" target="_top">BCI-10</a>
+                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000550/" target="_top">BCI-7e/9</a>
+                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000959/" target="_top">BCI-3e/6</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000133/" target="_top">PGI-2300</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000134/" target="_top">PGI-1300</a>
+                <a href="https://item.rakuten.co.jp/arkstore/c/0000000135/" target="_top">PGI-73</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <input type='checkbox' name="accordion" id="item2">
+      <label for="item2"> 互換テープ</label>
+      <div class="accordion-content">
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem2">
+          <label for="subitem2">幅・サイズ</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem2">
+              <div class="list-wrapper">
+                <a href="" target="_top">6MM</a>
+                <a href="" target="_top">9MM</a>
+                <a href="" target="_top">12MM</a>
+                <a href="" target="_top">18MM</a>
+                <a href="" target="_top">24MM</a>
+                <a href="" target="_top">36MM</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E7%99%BD%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
+                  target="_top">黒文字/白テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E8%B5%A4%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
+                  target="_top">黒文字/赤テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E9%9D%92%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
+                  target="_top">黒文字/青テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E9%BB%84%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
+                  target="_top">黒文字/黄テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E7%B7%91%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
+                  target="_top">黒文字/緑テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E9%80%8F%E6%98%8E%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
+                  target="_top">黒文字/透明テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E7%99%BD%E3%83%86%E3%83%BC%E3%83%97+%E8%B5%A4/?sid=294731"
+                  target="_top">赤文字/白テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E7%99%BD%E3%83%86%E3%83%BC%E3%83%97+%E9%9D%92/?sid=294731"
+                  target="_top">青文字/白テープ</a>
+                <a href="https://search.rakuten.co.jp/search/mall/%E9%BB%92%E3%83%86%E3%83%BC%E3%83%97+%E9%87%91/?sid=294731"
+                  target="_top">金文字/黒テープ</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+</body>
+
+</html>

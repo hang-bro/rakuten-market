@@ -1,0 +1,66 @@
+.accordion {
+  width: 250px;
+  &-item {
+    margin-bottom: 5px;
+    input[type='checkbox'] {
+      display: none;
+    }
+    label {
+      display: block;
+      padding: 10px;
+      background-color: #eee;
+      cursor: pointer;
+    }
+  }
+  &-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease-out;
+    background-color: #eee;
+  }
+}
+
+.accordion-item input[type='checkbox']:checked + label + .accordion-content {
+  max-height: 1000px;
+}
+.accordion-item input[type='checkbox']:not(:checked) + label + .accordion-content {
+  max-height: 0;
+}
+
+/* 二级手风琴 */
+.accordion-sub-item {
+}
+
+.accordion-sub-item label {
+  background-color: #e9e9e9;
+}
+
+/* 三级手风琴 */
+.accordion-sub-sub-item {
+  // margin-left: 40px;
+  background-color: #e1e1e1;
+}
+
+.accordion-sub-sub-item label {
+  background-color: #e1e1e1;
+}
+
+.list-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 5px;
+  justify-content: space-between;
+  a {
+    text-decoration: none;
+    list-style: none;
+    width: 45%;
+    background-color: #fff;
+    padding: 3px;
+    display: flex;
+    align-items: center;
+    text-indent: 1.5em;
+    font-size: 14px;
+    color: #000;
+  }
+}

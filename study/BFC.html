@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>opacity</title>
+    <style type="text/css">
+        .page{
+            width: 200px;
+            padding: 10px 20px;
+            border: 1px solid #eee;
+        }
+        .container {
+            overflow: hidden;
+        }
+        .container > .options{
+            opacity: 1;
+            transition: all .5s;
+        }
+        .container > .btn{
+            color: #4C98F7;
+            cursor: pointer;
+            text-decoration: underline;
+        }
+        .container > .hide{
+            display: none;
+        }
+        .container > .fold{
+            opacity: 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="page">
+        <div class="container">
+            <div class="btn" onclick="operate(this)" unfold="1">隐藏</div>
+            <div class="options">
+                <div class="option">选项1</div>
+                <div class="option">选项2</div>
+                <div class="option">选项3</div>
+                <div class="option">选项4</div>
+                <div class="option">选项5</div>
+                <div class="option">选项6</div>
+                <div class="option">选项7</div>
+            </div>
+        </div>
+    </div>
+</body>
+<script type="text/javascript">
+    function operate(btn){
+        const optionsNode = document.querySelector(".container > .options");
+        const unfold = btn.getAttribute("unfold");
+        if(unfold && unfold==="1"){
+            btn.innerText = "打开";
+            optionsNode.classList.add("fold");
+            const finish = () => {
+                optionsNode.classList.add("hide");
+                optionsNode.removeEventListener("transitionend", finish); // 移除监听器
+            }
+            optionsNode.addEventListener("transitionend", finish); // 添加监听器
+        }else{
+            btn.innerText = "隐藏";
+            optionsNode.classList.remove("hide");
+            setTimeout(() => optionsNode.classList.remove("fold"));
+        }
+        btn.setAttribute("unfold", unfold === "0" ? "1" : "0");
+    }
+</script>
+</html>
