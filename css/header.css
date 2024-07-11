@@ -138,6 +138,272 @@
   justify-content: space-between;
   margin: 0 auto;
 }
+.header .banner-and-ads .carousel {
+  position: relative;
+  width: 100%;
+  max-width: 1204px;
+  margin: 0 auto;
+  overflow: hidden;
+}
+.header .banner-and-ads .carousel input[type='radio'] {
+  display: none;
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-1:checked ~ .carousel-inner {
+  transform: translateX(0%);
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-1:checked ~ .carousel-indicators label[for='carousel-1'] {
+  background: white;
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-2:checked ~ .carousel-inner {
+  transform: translateX(-100%);
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-2:checked ~ .carousel-indicators label[for='carousel-2'] {
+  background: white;
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-3:checked ~ .carousel-inner {
+  transform: translateX(-200%);
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-3:checked ~ .carousel-indicators label[for='carousel-3'] {
+  background: white;
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-4:checked ~ .carousel-inner {
+  transform: translateX(-300%);
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-4:checked ~ .carousel-indicators label[for='carousel-4'] {
+  background: white;
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-5:checked ~ .carousel-inner {
+  transform: translateX(-400%);
+}
+.header .banner-and-ads .carousel input[type='radio']#carousel-5:checked ~ .carousel-indicators label[for='carousel-5'] {
+  background: white;
+}
+.header .banner-and-ads .carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+  animation: _carousel 25s infinite;
+}
+.header .banner-and-ads .carousel-item {
+  flex: 0 0 100%;
+  display: flex;
+  justify-content: space-between;
+}
+.header .banner-and-ads .carousel-item img {
+  width: 100%;
+  height: 100%;
+}
+.header .banner-and-ads .carousel-controls {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  display: none;
+}
+.header .banner-and-ads .carousel-controls img {
+  height: 60px;
+  cursor: pointer;
+}
+.header .banner-and-ads .carousel-indicators {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 10px;
+  display: none;
+}
+.header .banner-and-ads .carousel-indicators label {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.5);
+  cursor: pointer;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._left label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._left label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._left label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._left label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._left label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._right label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._right label[for='carousel-2'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._right label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._right label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-1:checked ~ .carousel-controls ._right label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._left label[for='carousel-1'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._left label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._left label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._left label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._left label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._right label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._right label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._right label[for='carousel-3'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._right label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-2:checked ~ .carousel-controls ._right label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._left label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._left label[for='carousel-2'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._left label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._left label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._left label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._right label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._right label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._right label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._right label[for='carousel-4'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-3:checked ~ .carousel-controls ._right label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._left label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._left label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._left label[for='carousel-3'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._left label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._left label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._right label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._right label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._right label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._right label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-4:checked ~ .carousel-controls ._right label[for='carousel-5'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._left label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._left label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._left label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._left label[for='carousel-4'] {
+  display: block;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._left label[for='carousel-5'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._right label[for='carousel-1'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._right label[for='carousel-2'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._right label[for='carousel-3'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._right label[for='carousel-4'] {
+  display: none;
+}
+.header .banner-and-ads #carousel-5:checked ~ .carousel-controls ._right label[for='carousel-5'] {
+  display: none;
+}
+@keyframes _carousel {
+  0%,
+  16% {
+    transform: translateX(0);
+  }
+  20%,
+  36% {
+    transform: translateX(-100%);
+  }
+  40%,
+  56% {
+    transform: translateX(-200%);
+  }
+  60%,
+  76% {
+    transform: translateX(-300%);
+  }
+  80%,
+  96% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(0);
+  }
+}
+.header .banner-and-ads .carousel[style*='--checked:1'] ~ .carousel-indicators label[for='carousel-1'] {
+  background: white;
+}
+.header .banner-and-ads .carousel[style*='--checked:2'] ~ .carousel-indicators label[for='carousel-2'] {
+  background: white;
+}
 .header .banner-and-ads_left {
   width: 200px;
   position: fixed;
