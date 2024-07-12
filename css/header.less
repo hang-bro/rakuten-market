@@ -183,12 +183,17 @@
       &-inner {
         display: flex;
         transition: transform 0.5s ease;
-        animation: _carousel 25s infinite;
+        animation: _carousel 20s infinite;
+        &:hover {
+          animation-play-state: paused;
+        }
       }
       &-item {
         flex: 0 0 100%;
         display: flex;
         justify-content: space-between;
+        cursor: pointer;
+
         img {
           width: 100%;
           height: 100%;
@@ -454,9 +459,6 @@
         transform: translateX(-300%);
       }
       80%,
-      96% {
-        transform: translateX(-400%);
-      }
       100% {
         transform: translateX(0);
       }
