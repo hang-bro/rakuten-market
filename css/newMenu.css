@@ -1,5 +1,8 @@
 .accordion {
   width: 250px;
+  /* 二级手风琴 */
+  /* 三级手风琴 */
+  /* 没有二级直接三级三级手风琴 */
 }
 .accordion-item {
   margin-bottom: 5px;
@@ -10,40 +13,37 @@
 .accordion-item label {
   display: block;
   padding: 10px;
-  background-color: #eee;
+  background-color: #f1eeee;
   cursor: pointer;
+  font-weight: 600;
 }
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  background-color: #eee;
+  background-color: #f1eeee;
 }
-.accordion-item input[type='checkbox']:checked + label + .accordion-content {
-  max-height: 1000px;
+.accordion-sub-item {
+  border-bottom: 1px solid #f9f9f9;
 }
-.accordion-item input[type='checkbox']:not(:checked) + label + .accordion-content {
-  max-height: 0;
-}
-/* 二级手风琴 */
 .accordion-sub-item label {
   background-color: #e9e9e9;
+  font-weight: normal;
 }
-/* 三级手风琴 */
 .accordion-sub-sub-item {
   background-color: #e1e1e1;
 }
 .accordion-sub-sub-item label {
   background-color: #e1e1e1;
 }
-.list-wrapper {
+.accordion-sub-sub-item .list-wrapper {
   display: flex;
   flex-wrap: wrap;
   padding: 5px;
   gap: 5px;
   justify-content: space-between;
 }
-.list-wrapper a {
+.accordion-sub-sub-item .list-wrapper a {
   text-decoration: none;
   list-style: none;
   width: 45%;
@@ -51,7 +51,32 @@
   padding: 3px;
   display: flex;
   align-items: center;
-  text-indent: 1.5em;
+  text-indent: 0.5em;
   font-size: 14px;
   color: #000;
+}
+.accordion-sub-item-third .third-list {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 5px;
+  gap: 5px;
+  justify-content: space-between;
+}
+.accordion-sub-item-third .third-list a {
+  text-decoration: none;
+  list-style: none;
+  width: 45%;
+  background-color: #fff;
+  padding: 3px;
+  display: flex;
+  align-items: center;
+  text-indent: 0.5em;
+  font-size: 14px;
+  color: #000;
+}
+.accordion-item input[type='checkbox']:checked + label + .accordion-content {
+  max-height: 1000px;
+}
+.accordion-item input[type='checkbox']:not(:checked) + label + .accordion-content {
+  max-height: 0;
 }

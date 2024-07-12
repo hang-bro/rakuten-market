@@ -10,146 +10,245 @@
 </head>
 
 <body>
-  <style>
-    .accordion {
-      width: 250px;
-    }
 
-    .accordion-item {
-      margin-bottom: 5px;
-    }
-
-    .accordion-item input[type='checkbox'] {
-      display: none;
-    }
-
-    .accordion-item label {
-      display: block;
-      padding: 10px;
-      background-color: #eee;
-      cursor: pointer;
-    }
-
-    .accordion-content {
-      max-height: 0;
-      overflow: hidden;
-      transition: max-height 0.3s ease-out;
-      background-color: #eee;
-    }
-
-    .accordion-item input[type='checkbox']:checked+label+.accordion-content {
-      max-height: 1000px;
-    }
-
-    .accordion-item input[type='checkbox']:not(:checked)+label+.accordion-content {
-      max-height: 0;
-    }
-
-    /* 二级手风琴 */
-    .accordion-sub-item label {
-      background-color: #e9e9e9;
-    }
-
-    /* 三级手风琴 */
-    .accordion-sub-sub-item {
-      background-color: #e1e1e1;
-    }
-
-    .accordion-sub-sub-item label {
-      background-color: #e1e1e1;
-    }
-
-    .list-wrapper {
-      display: flex;
-      flex-wrap: wrap;
-      padding: 5px;
-      gap: 5px;
-      justify-content: space-between;
-    }
-
-    .list-wrapper a {
-      text-decoration: none;
-      list-style: none;
-      width: 45%;
-      background-color: #fff;
-      padding: 3px;
-      display: flex;
-      align-items: center;
-      text-indent: 1.5em;
-      font-size: 14px;
-      color: #000;
-    }
-  </style>
   <div class="accordion">
+    <!-- 1 -->
     <div class="accordion-item">
       <input type='checkbox' name="accordion" id="item1">
-      <label for="item1"> 互換インク</label>
+      <label for="item1">ドリンク</label>
       <div class="accordion-content">
-        <div class="accordion-sub-item">
-          <input type='checkbox' name="accordion-sub" id="subitem1">
-          <label for="subitem1">キャノン互換</label>
-          <div class="accordion-content">
-            <div class="accordion-sub-sub-item">
-              <input type='checkbox' name="accordion-sub-sub" id="subsubitem1">
-              <div class="list-wrapper">
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000111/" target="_top">BCI-380/381</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000104/" target="_top">BCI-370/371</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000105/" target="_top">BCI-350/351</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000122/" target="_top">BCI-325/326</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000123/" target="_top">BCI-320/321</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000126/" target="_top">BCI-43</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000127/" target="_top">BCI-21/24</a>
-                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000926/" target="_top">BCI-15/16</a>
-                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000928/" target="_top">BCI-11</a>
-                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000923/" target="_top">BCI-10</a>
-                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000550/" target="_top">BCI-7e/9</a>
-                <a href="https://item.rakuten.co.jp/daiwasyoukayi/c/0000000959/" target="_top">BCI-3e/6</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000133/" target="_top">PGI-2300</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000134/" target="_top">PGI-1300</a>
-                <a href="https://item.rakuten.co.jp/arkstore/c/0000000135/" target="_top">PGI-73</a>
-              </div>
-            </div>
-
+        <div class="accordion-sub-item accordion-sub-item-third">
+          <div class="third-list">
+            <a href="">ウィルキンソン</a>
+            <a href="">強炭酸水</a>
+            <a href="">レッドブル</a>
+            <a href="">コカコーラ</a>
+            <a href="">ラムネ</a>
+            <a href="">モンスターエナジー</a>
+            <a href="">三ツ矢サイダー</a>
+            <a href="">エナジードリンク</a>
+            <a href="">ラベルレス</a>
+            <a href="">サンペレグリノ</a>
           </div>
         </div>
       </div>
     </div>
-
+    <!-- 2 -->
     <div class="accordion-item">
       <input type='checkbox' name="accordion" id="item2">
-      <label for="item2"> 互換テープ</label>
+      <label for="item2">コーヒー</label>
       <div class="accordion-content">
+        <div class="accordion-sub-item accordion-sub-item-third">
+          <div class="third-list">
+            <a href="">コーヒー豆</a>
+            <a href="">ドリップバッグ</a>
+            <a href="">コーヒー飲料</a>
+            <a href="">カプセルコーヒー</a>
+            <a href="">インスタントコーヒー</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 3 -->
+    <div class="accordion-item">
+      <input type='checkbox' name="accordion" id="item3">
+      <label for="item3">お茶</label>
+      <div class="accordion-content">
+        <div class="accordion-sub-item accordion-sub-item-third">
+          <div class="third-list">
+            <a href="">麦茶</a>
+            <a href="">ルイボスティー</a>
+            <a href="">緑茶</a>
+            <a href="">特茶</a>
+            <a href="">午後の紅茶</a>
+            <a href="">おーいお茶</a>
+            <a href="">抹茶</a>
+            <a href="">あずき茶</a>
+            <a href="">はちみつ紅茶</a>
+            <a href="">ほうじ茶</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 4 -->
+    <div class="accordion-item">
+      <input type='checkbox' name="accordion" id="item4">
+      <label for="item4">野菜·果実飲料</label>
+      <div class="accordion-content">
+        <div class="accordion-sub-item accordion-sub-item-third">
+          <div class="third-list">
+            <a href="">野菜ジュース</a>
+            <a href="">トマトジュース</a>
+            <a href="">りんごジュース</a>
+            <a href="">つぶらなカボス</a>
+            <a href="">シークワーサー</a>
+            <a href="">詰め合わせ</a>
+            <a href="">オレンジジュース</a>
+            <a href="">キレートレモン</a>
+            <a href="">ソルティライチ</a>
+            <a href="">1.8mx1.8m</a>
+            <a href="">1.8mx2.0m</a>
+            <a href="">2.0x2.0m</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- 5 -->
+    <div class="accordion-item">
+      <input type='checkbox' name="accordion" id="item5">
+      <label for="item5"> 互換インク</label>
+      <div class="accordion-content">
+        <!-- 5-1 -->
         <div class="accordion-sub-item">
-          <input type='checkbox' name="accordion-sub" id="subitem2">
-          <label for="subitem2">幅・サイズ</label>
+          <input type='checkbox' name="accordion-sub" id="subitem5">
+          <label for="subitem5">キャノン互換</label>
           <div class="accordion-content">
             <div class="accordion-sub-sub-item">
-              <input type='checkbox' name="accordion-sub-sub" id="subsubitem2">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem5">
               <div class="list-wrapper">
-                <a href="" target="_top">6MM</a>
-                <a href="" target="_top">9MM</a>
-                <a href="" target="_top">12MM</a>
-                <a href="" target="_top">18MM</a>
-                <a href="" target="_top">24MM</a>
-                <a href="" target="_top">36MM</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E7%99%BD%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
-                  target="_top">黒文字/白テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E8%B5%A4%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
-                  target="_top">黒文字/赤テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E9%9D%92%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
-                  target="_top">黒文字/青テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E9%BB%84%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
-                  target="_top">黒文字/黄テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E7%B7%91%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
-                  target="_top">黒文字/緑テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E9%80%8F%E6%98%8E%E3%83%86%E3%83%BC%E3%83%97+%E9%BB%92/?sid=294731"
-                  target="_top">黒文字/透明テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E7%99%BD%E3%83%86%E3%83%BC%E3%83%97+%E8%B5%A4/?sid=294731"
-                  target="_top">赤文字/白テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E7%99%BD%E3%83%86%E3%83%BC%E3%83%97+%E9%9D%92/?sid=294731"
-                  target="_top">青文字/白テープ</a>
-                <a href="https://search.rakuten.co.jp/search/mall/%E9%BB%92%E3%83%86%E3%83%BC%E3%83%97+%E9%87%91/?sid=294731"
-                  target="_top">金文字/黒テープ</a>
+                <a href="">BCI-380/381</a>
+                <a href="">BCI-370/371</a>
+                <a href="">BCI-350/351</a>
+                <a href="">BCI-325/326</a>
+                <a href="">BCI-320/321</a>
+                <a href="">BCI-43</a>
+                <a href="">BCI-21/24</a>
+                <a href="">BCI-19</a>
+                <a href="">BCI-15/16</a>
+                <a href="">BCI-11</a>
+                <a href="">BCI-10</a>
+                <a href="">BCI-7e/9</a>
+                <a href="">BCI-3e/6</a>
+                <a href="">PGI-2300</a>
+                <a href="">PGI-1300</a>
+                <a href="">PGI-73</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 5-2 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem5-2">
+          <label for="subitem5-2">エプソン互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem5-2">
+              <div class="list-wrapper">
+                <a href="">ITH</a>
+                <a href="">RDH</a>
+                <a href="">YTH</a>
+                <a href="">KUI</a>
+                <a href="">KAM</a>
+                <a href="">MUG</a>
+                <a href="">SAT</a>
+                <a href="">SAR</a>
+                <a href="">IB06</a>
+                <a href="">IP05</a>
+                <a href="">IP03</a>
+                <a href="">IC92</a>
+                <a href="">IC90</a>
+                <a href="">IC80</a>
+                <a href="">IC77/78</a>
+                <a href="">IC76</a>
+                <a href="">IC75</a>
+                <a href="">IC74</a>
+                <a href="">IC70</a>
+                <a href="">IC69</a>
+                <a href="">IC67</a>
+                <a href="">IC61/65</a>
+                <a href="">IC61/62</a>
+                <a href="">IC59</a>
+                <a href="">IC56</a>
+                <a href="">IC55</a>
+                <a href="">IC53</a>
+                <a href="">IC50</a>
+                <a href="">IC47</a>
+                <a href="">IC46</a>
+                <a href="">IC45</a>
+                <a href="">IC42</a>
+                <a href="">IC37</a>
+                <a href="">IC35</a>
+                <a href="">IC34</a>
+                <a href="">IC33</a>
+                <a href="">IC32</a>
+                <a href="">IC31</a>
+                <a href="">IC29</a>
+                <a href="">IC28</a>
+                <a href="">IC23</a>
+                <a href="">IC22</a>
+                <a href="">IC21</a>
+                <a href="">IC13</a>
+                <a href="">IC12</a>
+                <a href="">IC05/IC06</a>
+                <a href="">IC04</a>
+                <a href="">IC03</a>
+                <a href="">IC02</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 5-3 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem5-3">
+          <label for="subitem5-3">ブラザー互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem5-3">
+              <div class="list-wrapper">
+                <a href="">LC3139</a>
+                <a href="">LC3135</a>
+                <a href="">LC3133</a>
+                <a href="">LC3111</a>
+                <a href="">LC211</a>
+                <a href="">LC119/115</a>
+                <a href="">LC117/115</a>
+                <a href="">LC113</a>
+                <a href="">LC111</a>
+                <a href="">LC110</a>
+                <a href="">LC21</a>
+                <a href="">LC17</a>
+                <a href="">LC12</a>
+                <a href="">LC11/16</a>
+                <a href="">LC10</a>
+                <a href="">LC09</a>
+                <a href="">LC07</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 5-4 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem5-4">
+          <label for="subitem5-4">HP互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem5-4">
+              <div class="list-wrapper">
+                <a href="">HP950/951</a>
+                <a href="">HP940</a>
+                <a href="">HP932/933</a>
+                <a href="">HP920</a>
+                <a href="">HP178</a>
+                <a href="">HP177</a>
+                <a href="">その他</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 5-5 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem5-5">
+          <label for="subitem5-5">DELL互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem5-5">
+              <div class="list-wrapper">
+                <a href="">DL21-24</a>
+                <a href="">DL31-34</a>
               </div>
             </div>
 
@@ -157,8 +256,124 @@
         </div>
       </div>
     </div>
+    <!-- 6 -->
+    <div class="accordion-item">
+      <input type='checkbox' name="accordion" id="item6">
+      <label for="item6"> 互換トナー</label>
+      <div class="accordion-content">
+        <!-- 6-1 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem6">
+          <label for="subitem6">キャノン互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem6">
+              <div class="list-wrapper">
+                <a href="">CRG-524/CRG-524II</a>
+                <a href="">CRG-519/CRG-519II</a>
+                <a href="">CRG-515/CRG-515II</a>
+                <a href="">CRG-510/CRG-510II</a>
+                <a href="">CRG-508II</a>
+                <a href="">CRG-418</a>
+                <a href="">CRG-416</a>
+                <a href="">CRG-337</a>
+                <a href="">CRG-331</a>
+                <a href="">CRG-329</a>
+                <a href="">CRG-328</a>
+                <a href="">CRG-326</a>
+                <a href="">CRG-325</a>
+                <a href="">CRG-318</a>
+                <a href="">CRG-316</a>
+                <a href="">CRG-312</a>
+                <a href="">CRG-304</a>
+                <a href="">CRG-303</a>
+                <a href="">EP-32</a>
+                <a href="">EP-26</a>
+              </div>
+            </div>
 
+          </div>
+        </div>
+        <!-- 6-2 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem6-2">
+          <label for="subitem6-2">エプソン互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem6-2">
+              <div class="list-wrapper">
+                <a href="">LPC3T18</a>
+                <a href="">LPC3T33</a>
+                <a href="">LPC3T35</a>
+              </div>
+            </div>
 
+          </div>
+        </div>
+        <!-- 6-3 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem6-3">
+          <label for="subitem6-3">ブラザー互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem6-3">
+              <div class="list-wrapper">
+                <a href="">TN-396</a>
+                <a href="">TN-291/296</a>
+                <a href="">TN-62J</a>
+                <a href="">TN-56J</a>
+                <a href="">TN-48J</a>
+                <a href="">TN-28J</a>
+                <a href="">TN-27J</a>
+                <a href="">TN-26J</a>
+                <a href="">TN-25J</a>
+                <a href="">TN-11J</a>
+                <a href="">DR-51J</a>
+                <a href="">DR-41J</a>
+                <a href="">DR-31J</a>
+                <a href="">DR-23J</a>
+                <a href="">DR-22J</a>
+                <a href="">DR-21J</a>
+                <a href="">DR-20J</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 6-4 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem6-4">
+          <label for="subitem6-4">フジゼロックス互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem6-4">
+              <div class="list-wrapper">
+                <a href="">CT-201398K</a>
+                <a href="">CT-201399C</a>
+                <a href="">CT-201400M</a>
+                <a href="">CT-201401Y</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+        <!-- 6-5 -->
+        <div class="accordion-sub-item">
+          <input type='checkbox' name="accordion-sub" id="subitem6-5">
+          <label for="subitem6-5">エヌイーシー互換</label>
+          <div class="accordion-content">
+            <div class="accordion-sub-sub-item">
+              <input type='checkbox' name="accordion-sub-sub" id="subsubitem6-5">
+              <div class="list-wrapper">
+                <a href="">PR-L5600C</a>
+                <a href="">PR-L5700C</a>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </body>
 
