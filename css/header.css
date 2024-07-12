@@ -410,6 +410,7 @@
   position: fixed;
   top: 80px;
   left: 10px;
+  z-index: 1;
 }
 .header .banner-and-ads_left img {
   width: 100%;
