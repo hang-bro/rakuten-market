@@ -1,8 +1,41 @@
 .accordion {
-  width: 250px;
+  width: 200px;
   /* 二级手风琴 */
   /* 三级手风琴 */
   /* 没有二级直接三级三级手风琴 */
+}
+.accordion-menu {
+  width: 100%;
+}
+.accordion-menu-header {
+  height: 60px;
+  color: white;
+}
+.accordion-menu-header img {
+  height: 60px;
+}
+.accordion-menu-search {
+  margin: 12px 0;
+  position: relative;
+}
+.accordion-menu-search input {
+  height: 40px;
+  width: 100%;
+  border: 1px solid red;
+  border-radius: 100px;
+  text-indent: 10px;
+  color: #292525;
+  font-size: 14px;
+}
+.accordion-menu-search input:focus {
+  outline: 1.5px solid red;
+}
+.accordion-menu-search img {
+  position: absolute;
+  right: 10px;
+  top: 8px;
+  width: 25px;
+  height: 25px;
 }
 .accordion-item {
   margin-bottom: 5px;
@@ -13,68 +46,90 @@
 .accordion-item label {
   display: block;
   padding: 10px;
-  background-color: #f1eeee;
+  background-color: #f5f5f5;
   cursor: pointer;
   font-weight: 600;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.accordion-item label .left-icon {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.accordion-item label .left-icon img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+.accordion-item label .right-icon {
+  margin-right: 20px;
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #b5b2b2cc;
+  border-right: 2px solid #b5b2b2cc;
+  transform: rotate(135deg);
+  transition: all ease 0.5s;
 }
 .accordion-content {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease-out;
-  background-color: #f1eeee;
+  background-color: #f5f5f5;
   position: relative;
 }
-.accordion-content::before {
-  content: '';
-  position: absolute;
-  width: 1px;
-  height: 100%;
-  left: 20px;
-  background: #ebebed;
-}
-.accordion .no-line::before {
-  content: none;
-}
-.accordion .no-line .accordion-sub-item {
-  padding-left: 0;
-}
 .accordion-sub-item {
-  padding-left: 20px;
   background-color: #f8f8f8;
+}
+.accordion-sub-item:nth-child(1) {
+  margin-top: 15px;
 }
 .accordion-sub-item label {
   background-color: #f8f8f8;
   font-weight: normal;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: all ease 0.5s;
+  padding-left: 15px;
+}
+.accordion-sub-item label .sub-right-icon {
+  margin-right: 20px;
+  width: 8px;
+  height: 8px;
+  border-top: 2px solid #b5b2b2cc;
+  border-right: 2px solid #b5b2b2cc;
+  transform: rotate(135deg);
+  transition: all ease 0.5s;
 }
 .accordion-sub-item .accordion-content::before {
   content: none;
 }
 .accordion-sub-sub-item {
-  background-color: #e1e1e1;
+  background: #fff8f2;
 }
 .accordion-sub-sub-item label {
   background-color: #e1e1e1;
 }
 .accordion-sub-sub-item .list-wrapper {
   display: flex;
-  flex-wrap: wrap;
-  padding: 5px;
-  gap: 5px;
+  flex-direction: column;
   justify-content: space-between;
-  background-color: #e7e7e7;
-  padding-left: 20px;
 }
 .accordion-sub-sub-item .list-wrapper a {
   text-decoration: none;
   list-style: none;
-  width: 45%;
-  background-color: #fff;
-  padding: 3px;
+  margin: 8px;
   display: flex;
   align-items: center;
-  text-indent: 0.5em;
+  text-indent: 2.5em;
   font-size: 14px;
   color: #000;
+}
+.accordion-sub-sub-item .list-wrapper a:hover {
+  color: orange;
 }
 .accordion-sub-item-third .third-list {
   display: flex;
@@ -97,6 +152,18 @@
 }
 .accordion-item input[type='checkbox']:checked + label + .accordion-content {
   max-height: 1000px;
+}
+.accordion-item input[type='checkbox']:checked + label > .right-icon {
+  transform: rotate(-45deg);
+}
+.accordion-sub-item input[type='checkbox']:checked + label > .sub-right-icon {
+  transform: rotate(-45deg);
+  border-color: white;
+}
+.accordion-sub-item input[type='checkbox']:checked + label {
+  background: orange;
+  border-radius: 35px;
+  color: white;
 }
 .accordion-item input[type='checkbox']:not(:checked) + label + .accordion-content {
   max-height: 0;
