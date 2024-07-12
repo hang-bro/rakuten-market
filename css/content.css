@@ -74,6 +74,9 @@
   flex-wrap: wrap;
   justify-content: space-between;
 }
+.content-item li .list ul li::marker {
+  content: none;
+}
 .content-item li .list ul li a {
   display: flex;
   flex-direction: column;
