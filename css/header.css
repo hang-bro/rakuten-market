@@ -86,7 +86,8 @@
   top: 0px;
 }
 .header-wrapper .logo-and-search .input-with-menu {
-  margin-left: 130px;
+  margin-left: 30px;
+  margin-bottom: 40px;
 }
 .header-wrapper .logo-and-search .input-with-menu ._input {
   position: relative;
@@ -406,9 +407,9 @@
   background: white;
 }
 .header .banner-and-ads_left {
-  width: 200px;
+  width: 250px;
   position: fixed;
-  top: 80px;
+  top: 215px;
   left: 10px;
   z-index: 1;
 }
@@ -419,9 +420,9 @@
   margin-bottom: 5px;
 }
 .header .banner-and-ads_right {
-  width: 200px;
+  width: 250px;
   position: fixed;
-  top: 80px;
+  top: 305px;
   right: 10px;
 }
 .header .banner-and-ads_right img {
